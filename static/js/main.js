@@ -5,7 +5,7 @@ const sectionLinks = [...document.querySelectorAll('[data-section-link]')];
 const publicationOptions = [...document.querySelectorAll('[data-publication-option]')];
 const publicationLists = [...document.querySelectorAll('[data-publication-list]')];
 
-function showSection(sectionName, updateHistory = true) {
+function showSection(sectionName, updateHistory = true, scroll = true) {
   const requested = panels.find((panel) => panel.dataset.section === sectionName);
   const target = requested || panels[0];
 
@@ -25,7 +25,19 @@ function showSection(sectionName, updateHistory = true) {
   const sectionTitle = target.dataset.section.charAt(0).toUpperCase() + target.dataset.section.slice(1);
   document.title = `${sectionTitle} · Geetanjali Aich`;
   if (updateHistory && location.hash !== `#${target.dataset.section}`) history.pushState(null, '', `#${target.dataset.section}`);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (!scroll) return;
+
+  // The profile card sits above the content panels on mobile. Scroll past it
+  // so the section selected in the menu is immediately visible.
+  requestAnimationFrame(() => {
+    const mobile = window.matchMedia('(max-width: 760px)').matches;
+    const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
+    const top = mobile
+      ? target.getBoundingClientRect().top + window.scrollY - headerHeight - 16
+      : 0;
+
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  });
 }
 
 sectionLinks.forEach((link) => link.addEventListener('click', (event) => {
@@ -59,4 +71,4 @@ publicationOptions.forEach((option) => option.addEventListener('click', () => {
 }));
 
 window.addEventListener('popstate', () => showSection(location.hash.slice(1) || 'about', false));
-showSection(location.hash.slice(1) || 'about', false);
+showSection(location.hash.slice(1) || 'about', false, Boolean(location.hash));
