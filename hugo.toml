@@ -1,0 +1,13 @@
+baseURL = "https://geetanjaliaich.github.io/"
+locale = "en-US"
+title = "Geetanjali Aich"
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  description = "Researcher in artificial intelligence, multimodal learning, and computer vision."
+  author = "Geetanjali Aich"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

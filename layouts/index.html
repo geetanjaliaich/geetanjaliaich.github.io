@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.Params.description }}">
+  <title>{{ site.Title }}</title>
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}?v=29">
+</head>
+<body>
+  {{ $p := hugo.Data.profile }}
+  <header class="site-header">
+    <a class="wordmark" href="#about" data-section-link="about" aria-label="About"><strong>Geetanjali</strong> <span>Aich</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+    <nav id="site-nav" aria-label="Portfolio sections">
+      <a href="#about" data-section-link="about">About</a>
+      <a href="#publications" data-section-link="publications">Publications</a>
+      <a href="#experience" data-section-link="experience">Experience</a>
+      <a href="#awards" data-section-link="awards">Recognition</a>
+      <a href="https://drive.google.com/file/d/18P_D7n0ctUzf9K_F03N7RUqE2QqF2JSi/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
+    </nav>
+  </header>
+
+  <main class="portfolio-shell">
+    <aside class="profile-card">
+      <div class="avatar"><img src="{{ "images/geetanjali-aich.jpeg" | relURL }}" alt="Portrait of Geetanjali Aich"></div>
+      <h1>{{ $p.name }}</h1>
+      <p class="pronouns">she/her</p>
+      <p class="headline">{{ $p.headline }}</p>
+      <p class="affiliation">{{ $p.affiliation }}</p>
+      <div class="socials">
+        <a href="mailto:{{ $p.email }}" aria-label="Email Geetanjali Aich" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
+        <a href="{{ $p.linkedin }}" target="_blank" rel="noreferrer" aria-label="Geetanjali Aich on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13.2c.7-2 4-2.2 4 1V17"/></svg></a>
+        <a href="{{ $p.github }}" target="_blank" rel="noreferrer" aria-label="Geetanjali Aich on GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.5 5.5 0 0 0 19.3 4 5.1 5.1 0 0 0 19.2.5S18 0 15 2a13.4 13.4 0 0 0-7 0C5-.1 3.8.5 3.8.5A5.1 5.1 0 0 0 3.7 4a5.5 5.5 0 0 0-1.5 3.8c0 5.3 3.5 6.5 6.8 6.9A4.8 4.8 0 0 0 8 18v4M8 19c-3 .9-3-1.5-4-2"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=s9P-0QYAAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Geetanjali Aich on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2.5 9 9.5-5 9.5 5-9.5 5-9.5-5Z"/><path d="M6 11.2v5c3 2.4 9 2.4 12 0v-5M21.5 9v6"/></svg></a>
+      </div>
+      <div class="profile-education">
+        <h2>Education</h2>
+        {{ range $p.education }}<article><svg class="education-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9 12 4l9.5 5L12 14 2.5 9Z"/><path d="M6 11v5.2c2.8 2.4 9.2 2.4 12 0V11M21.5 9v6"/></svg><div><h3><span>{{ .degree }}</span><time>{{ .graduation_year }}</time></h3><p>{{ .school }}</p></div></article>{{ end }}
+      </div>
+    </aside>
+
+    <div class="content-stage" aria-live="polite">
+      <section id="about" class="content-panel active" data-section="about">
+        <p class="eyebrow">About me</p>
+        <div class="intro-copy">{{ range $p.about }}<p>{{ . | markdownify }}</p>{{ end }}</div>
+        <h3 class="subheading">Research interests</h3>
+        <div class="tag-list">{{ range $p.interests }}<span>{{ . }}</span>{{ end }}</div>
+      </section>
+
+      <section id="experience" class="content-panel" data-section="experience" hidden>
+        <p class="eyebrow">Teaching and Research</p>
+        <ul class="experience-list">{{ range $p.experience }}<li class="experience-item"><div class="card-top"><div><p class="period">{{ .period }}</p><h3>{{ .role }}</h3><p class="organization">{{ with .url }}<a href="{{ . }}" target="_blank" rel="noreferrer">{{ end }}{{ .organization }}{{ with .url }}</a>{{ end }}</p></div><span class="location">{{ .location }}</span></div><ul class="experience-details">{{ range .summary }}<li>{{ . }}</li>{{ end }}</ul><div class="tag-list small">{{ range .tags }}<span>{{ . }}</span>{{ end }}</div></li>{{ end }}</ul>
+      </section>
+
+      <section id="publications" class="content-panel" data-section="publications" hidden>
+        <p class="eyebrow">Research Areas and Papers</p>
+        {{ $categories := slice "Responsible AI, Evaluation & Society" "AI for Health and Miscellaneous" }}
+        <div class="publication-options">
+          {{ range $categories }}{{ $category := . }}{{ $id := $category | urlize }}
+            <button class="publication-option" type="button" data-publication-option="{{ $id }}" aria-expanded="false" aria-controls="publication-{{ $id }}"><span>{{ $category }}</span><small>{{ len (where $p.publications "category" $category) }} papers</small><i aria-hidden="true">+</i></button>
+          {{ end }}
+        </div>
+        <div class="publication-results">
+          {{ range $categories }}{{ $category := . }}{{ $id := $category | urlize }}
+            <div id="publication-{{ $id }}" class="publication-list" data-publication-list="{{ $id }}" hidden>{{ range where $p.publications "category" $category }}<article class="publication"><div class="publication-visual {{ .category | urlize }}" role="img" aria-label="{{ .visual }}, {{ .year }}"><span>{{ .year }}</span><strong>{{ .visual }}</strong></div><div class="publication-copy"><h3>{{ if .url }}<a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3><p class="authors">{{ range $index, $author := .authors }}{{ $authorName := strings.TrimSuffix "*" $author }}{{ $equal := strings.HasSuffix $author "*" }}{{ $noScholar := in (slice "Sanjna Suresh" "Pramith Kiran Govinda Reddy Bhaskar" "Ankush Gupta") $authorName }}{{ if $index }}, {{ end }}{{ if eq $authorName "Geetanjali Aich" }}<a href="https://scholar.google.com/citations?user=s9P-0QYAAAAJ&hl=en" target="_blank" rel="noreferrer">{{ $authorName }}</a>{{ else if $noScholar }}{{ $authorName }}{{ else }}<a href="https://scholar.google.com/citations?view_op=search_authors&mauthors={{ $authorName | urlquery }}&hl=en" target="_blank" rel="noreferrer">{{ $authorName }}</a>{{ end }}{{ if $equal }}<sup>*</sup>{{ end }}{{ end }}</p><p class="venue">{{ .venue }}{{ with .note }} · {{ . }}{{ end }}</p><details class="paper-details"><summary>About this work</summary><p class="paper-description">{{ .description }}</p></details></div></article>{{ end }}</div>
+          {{ end }}
+        </div>
+      </section>
+
+      <section id="awards" class="content-panel" data-section="awards" hidden>
+        <p class="eyebrow">Recognition</p>
+        <div class="award-grid">{{ range sort $p.awards "year" "desc" }}<article class="award-card"><time>{{ .year }}</time><h3>{{ .title }}</h3></article>{{ end }}</div>
+        <div class="news-section">
+          <p class="eyebrow">News Mentions</p>
+          <div class="news-list">{{ range $p.news_mentions }}<article class="news-card"><div class="news-meta"><span>{{ .publication }}</span><time>{{ .date }}</time></div><h3><a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .title }}</a></h3><p>{{ .description }}</p><a class="news-link" href="{{ .url }}" target="_blank" rel="noreferrer">Read article ↗</a></article>{{ end }}</div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <footer><p>© {{ now.Year }} {{ $p.name }} · Built with Hugo</p></footer>
+  <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+name: Geetanjali Aich
+headline: AI Research Participant @ CICStep
+affiliation: University of Massachusetts Amherst
+location: Amherst, Massachusetts
+email: gaich@umass.edu
+phone: 413-466-2167
+linkedin: https://www.linkedin.com/in/geetanjali-aich
+github: https://github.com/geetanjaliaich
+about:
+  - >-
+    I recently completed my Master’s in Computer Science at [UMass Amherst](https://www.umass.edu/) and am currently a CICStep Participant at the [Manning College of Information and Computer Sciences (CICS)](https://www.cics.umass.edu/), [UMass Amherst](https://www.umass.edu/). My current research focuses on social media mining and fine-tuning large language models (LLMs), with broader interests in responsible and trustworthy AI, computational social science, and AI for healthcare. During my time at [UMass Amherst](https://www.umass.edu/), I had the opportunity to collaborate with and be mentored by [Dr. Youngja Park](https://research.ibm.com/people/youngja-park) at [IBM T.J. Watson Research Center](https://research.ibm.com/labs/yorktown-heights) and [Dr. Przemyslaw Grabowicz](https://przemyslslaw.github.io/) through the [SIMS Lab](https://przemyslslaw.github.io/sims-lab/) at [UMass Amherst](https://www.umass.edu/) and [University College Dublin](https://www.ucd.ie/). I also completed an independent study with the [BioNLP Lab at UMass Amherst](https://www.cics.umass.edu/organizations/biomedical-informatics-nlp-lab), where I investigated and adapted 3D multimodal language models for volumetric medical data. These experiences allowed me to work on research involving LLM evaluation, social media analysis, computational social science, and NLP for healthcare.
+  - >-
+    Before joining [UMass Amherst](https://www.umass.edu/), I worked as a Junior Project Assistant and Research Trainee at the [Center for Soft Computing Research, Indian Statistical Institute (ISI)](https://csscworkshop.wixsite.com/csscisi), Kolkata, under the mentorship of [Dr. Kuntal Ghosh](https://scholar.google.com/citations?user=_ZvzkwIAAAAJ&hl=en) and [Dr. Sanjit Maitra](https://sites.google.com/view/sanjit-maitra/home) from [ISI Tezpur](https://www.isine.ac.in/). My research there primarily focused on AI for healthcare and satellite imaging, contributing to my earlier publications and developing my interest in applying machine learning to interdisciplinary problems. I received my B.Tech. in Electronics and Communication Engineering from [Heritage Institute of Technology](https://heritageit.edu/), Kolkata, where I completed my undergraduate thesis on medical imaging under the mentorship of [Dr. Anindya Sen](https://scholar.google.com/citations?user=vA6hgasAAAAJ&hl=en).
+  - >-
+    I care deeply about developing AI systems that are fair, inclusive, safe, and representative of diverse communities. I have been fortunate to collaborate with researchers from [![Queer in AI logo](/images/queer-in-ai-logo.png)](https://www.queerinai.com/team) [Queer in AI](https://www.queerinai.com/team) on work exploring these broader questions around AI, representation, and society.
+interests:
+  - Large Language Models
+  - Responsible AI
+  - AI and Society
+  - AI Evaluation
+  - AI for Healthcare
+
+education:
+  - degree: MS in Computer Science
+    graduation_year: 2026
+    school: University of Massachusetts Amherst
+    location: Amherst, MA
+    period: Sep 2024 – May 2026
+    detail: "GPA: 3.86 / 4.0"
+  - degree: PGP in Artificial Intelligence and Machine Learning (Online)
+    graduation_year: 2022
+    school: UT Austin McCombs School of Business, with Great Learning
+    location: Online
+    period: Aug 2021 – Nov 2022
+    detail: "GPA: 3.85 / 4.0"
+  - degree: B.Tech. in Electronics and Communication Engineering
+    graduation_year: 2021
+    school: Heritage Institute of Technology
+    location: Kolkata, India
+    period: Jul 2017 – Jul 2021
+    detail: "GPA: 9.01 / 10"
+
+experience:
+  - role: Grader and Teaching Assistant
+    organization: "COMPSCI 528: Mobile and Ubiquitous Computing"
+    url: https://people.cs.umass.edu/~phuc/courses/spring26/
+    location: UMass Amherst
+    period: Spring 2026
+    summary:
+      - Assisted the professor with grading assignments for a class of more than 60 students.
+      - Held office hours to answer questions, clarify course material, and support students with their assignments.
+    tags: [Teaching, Grading, Student Support]
+  - role: Graduate Student Researcher (Independent Study)
+    organization: BioNLP Lab, UMass Amherst
+    location: Amherst, MA
+    period: Jan 2025 – Apr 2025
+    summary:
+      - Investigated 3D multimodal LLMs for medical data using the M3D dataset.
+      - Adapted multimodal language models to accept volumetric medical inputs.
+      - Used the Unity cluster to train and evaluate models at scale.
+    tags: [Python, PyTorch, Multimodal LLMs, Medical AI]
+  - role: Junior Project Assistant and Research Trainee
+    organization: Centre for Soft Computing Research, Indian Statistical Institute
+    location: Kolkata, India
+    period: Jul 2020 – Aug 2023
+    summary:
+      - Built a Python data pipeline to process 430 million COVID-19 records through API integration.
+      - Developed research implementations for segmentation, boundary detection, fMRI analysis, facial texture analysis, and satellite imagery.
+      - Created computer vision and remote-sensing pipelines for Kaziranga boundary detection, LANDSAT segmentation, and water-body extraction, with a proposed segmentation approach reaching 99% accuracy.
+    tags: [PyTorch, TensorFlow, OpenCV, GDAL, Scikit-learn]
+
+publications:
+  - year: 2026
+    category: Responsible AI, Evaluation & Society
+    visual: COLM 2026 · MOSS Workshop
+    title: "Understanding Small Scale Fine-tuning of LLM-as-a-Judge: A Case Study in Cybersecurity"
+    description: >-
+      This work studies whether a compact, domain-adapted LLM can reliably judge open-ended cybersecurity answers. It introduces a 150K-sample benchmark of prompts and model responses and fine-tunes a judge with QLoRA and Unsloth. The resulting system improves evaluation accuracy from 40% to 75% while reducing inference runtime by 10×.
+    authors:
+      - Sanjna Suresh*
+      - Geetanjali Aich*
+      - Pramith Kiran Govinda Reddy Bhaskar
+      - Youngja Park
+    venue: COLM 2026 Workshop on Methods and Opportunities at Small Scale (MOSS)
+    note: "* Equal contribution"
+    url: https://openreview.net/forum?id=LEqZJUhHgg
+  - year: 2026
+    category: Responsible AI, Evaluation & Society
+    visual: arXiv · Under Review at TACL
+    title: "Queer NLP: A Critical Survey on Literature Gaps, Biases and Trends"
+    description: >-
+      This survey systematically reviews ACL Anthology research concerning LGBTQIA+ communities and NLP technologies. It maps recurring topics, methods, biases, and omissions across the literature. The study calls for more stakeholder involvement, intersectional and interdisciplinary work, broader language coverage, and proactive harm mitigation.
+    authors:
+      - Sabine Weber
+      - Angelina Wang
+      - Ankush Gupta
+      - Arjun Subramonian
+      - Dennis Ulmer
+      - Eshaan Tanwar
+      - Geetanjali Aich
+      - Hannah Devinney
+      - Jacob Hobbs
+      - Jennifer Mickel
+      - Joshua Tint
+      - Mae Sosto
+      - Ray Groshan
+      - Simone Astarita
+      - Vagrant Gautam
+      - Verena Blaschke
+      - William Agnew
+      - Wilson Y. Lee
+      - Yanan Long
+    venue: arXiv preprint; under review at TACL
+    url: https://arxiv.org/abs/2602.16151
+  - year: 2024
+    category: AI for Health and Miscellaneous
+    visual: Journal of the Indian Society of Remote Sensing
+    title: "Otsu-BRSG: An Effective Algorithm for River Bank Line Detection and Monitoring in the Challenging Terrains of Kaziranga National Park"
+    description: >-
+      This study uses multispectral Landsat and Sentinel-2 imagery to monitor the Brahmaputra river bank near Kaziranga National Park. It combines Savitzky–Golay smoothing with an Otsu-based boundary-refinement algorithm to track difficult, changing terrain. Analysis from 2008–2018 identified erosion and a net loss of 540.63 hectares of wooded area, with Majuli Island used as an additional case study.
+    authors:
+      - Srutiparna Neogi*
+      - Geetanjali Aich*
+      - Aniruddha Dey
+      - Sanjit Maitra
+      - Oishila Bandyopadhyay
+      - Kuntal Ghosh
+    venue: Journal of the Indian Society of Remote Sensing, 52, 1–20
+    note: "* Equal contribution"
+    url: https://doi.org/10.1007/s12524-024-01843-z
+  - year: 2024
+    category: AI for Health and Miscellaneous
+    visual: Multimedia Tools and Applications
+    title: "Investigating the Impact of Standard Brain Atlases and Connectivity Measures on the Accuracy of ADHD Detection from fMRI Data using Deep Learning"
+    description: >-
+      The paper studies how brain-atlas and connectivity choices affect deep-learning diagnosis of ADHD from fMRI. It compares image-based connectivity-matrix models with graph-based network-feature models across six atlases, two connectivity measures, and 352 scans. The experiments reveal substantial performance variation across configurations and competitive accuracy against deep-learning baselines.
+    authors:
+      - Snigdha Agarwal
+      - Adarsh Raj
+      - Anjan Chowdhury
+      - Geetanjali Aich
+      - Rajdeep Chatterjee
+      - Kuntal Ghosh
+    venue: Multimedia Tools and Applications, 83, 67023–67057
+    url: https://doi.org/10.1007/s11042-023-17962-7
+  - year: 2024
+    category: AI for Health and Miscellaneous
+    visual: PReMI 2021
+    title: "ADHDNet: A DNN Based Framework for Efficient ADHD Detection from fMRI Dataset"
+    description: >-
+      ADHDNet detects ADHD from functional-connectivity changes in the ADHD-200 fMRI dataset. Complex-network features are extracted using MSDL and BASC brain atlases and classified with a five-layer neural network. Sampling strategies address class imbalance, with the strongest configurations reaching 100% and 93% test accuracy.
+    authors:
+      - Anjan Chowdhury
+      - Rajdeep Chatterjee
+      - Geetanjali Aich
+      - Kuntal Ghosh
+    venue: Pattern Recognition and Machine Intelligence (PReMI 2021)
+    url: https://doi.org/10.1007/978-3-031-12700-7_15
+  - year: 2022
+    category: AI for Health and Miscellaneous
+    visual: IEEE CALCON 2022
+    title: "Retinal Blood Vessel Segmentation and Analysis using Lightweight Spatial Attention-based CNN and Data Augmentation"
+    description: >-
+      This work proposes a lightweight encoder–decoder CNN for fast, precise retinal-vessel segmentation under varying image quality and anatomy. The model is evaluated on the DRIVE and CHASE fundus datasets with targeted augmentation. It achieves competitive accuracy and F1 scores with fewer parameters and an average inference time of 0.0059 seconds.
+    authors:
+      - Srinjoy Bhuiya
+      - Soumik Roy Choudhury
+      - Geetanjali Aich
+      - Muskaan Maurya
+      - Anindya Sen
+    venue: 2022 IEEE Calcutta Conference (CALCON)
+    url: https://ieeexplore.ieee.org/document/10060189/
+  - year: 2021
+    category: AI for Health and Miscellaneous
+    visual: IEEE SMART GENCON 2021
+    title: "Optical Disc Segmentation from Color Fundus Image using Contrast Limited Adaptive Histogram Equalization and Morphological Operations"
+    description: >-
+      This paper develops an automated optic-disc segmentation pipeline for color fundus images, an important step in glaucoma analysis. CLAHE, logarithmic correction, morphological processing, and multi-Otsu thresholding enhance and isolate the disc region on DRISHTI-GS1. The method reports 94.7% average accuracy and an 89.6% F1 score.
+    authors:
+      - Geetanjali Aich
+      - Pramita Banerjee
+      - Shreeparna Debnath
+      - Anindya Sen
+    venue: International Conference on Smart Generation Computing, Communication and Networking (SMART GENCON)
+    url: https://ieeexplore.ieee.org/document/9645808/
+
+awards:
+  - title: Jagadish Bose National Talent Search Junior Encouragement Award
+    detail: Awarded to top students in West Bengal for academic excellence and research potential
+    year: 2016
+  - title: General Manager Award - Eastern Indian Railways
+    detail: Recognized for developing the “TRD MCQ – Bidyut Sathi” application for the ER SDAH Division
+    year: 2021
+
+news_mentions:
+  - title: Does Coming Out in a STEM Workplace Have an Imprint on the Scientific Literature?
+    publication: The Wire Science
+    date: March 4, 2022
+    url: https://science.thewire.in/society/gender/lgbtqia/queer-transgender-identity-stem-workplace-correlate-productivity/
+    description: Featured perspective on queer identity, workplace inclusion, and research productivity in STEM.
