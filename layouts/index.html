@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}?v=29">
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}?v=31">
 </head>
 <body>
   {{ $p := hugo.Data.profile }}
@@ -69,6 +69,10 @@
           {{ range $categories }}{{ $category := . }}{{ $id := $category | urlize }}
             <div id="publication-{{ $id }}" class="publication-list" data-publication-list="{{ $id }}" hidden>{{ range where $p.publications "category" $category }}<article class="publication"><div class="publication-visual {{ .category | urlize }}" role="img" aria-label="{{ .visual }}, {{ .year }}"><span>{{ .year }}</span><strong>{{ .visual }}</strong></div><div class="publication-copy"><h3>{{ if .url }}<a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3><p class="authors">{{ range $index, $author := .authors }}{{ $authorName := strings.TrimSuffix "*" $author }}{{ $equal := strings.HasSuffix $author "*" }}{{ $noScholar := in (slice "Sanjna Suresh" "Pramith Kiran Govinda Reddy Bhaskar" "Ankush Gupta") $authorName }}{{ if $index }}, {{ end }}{{ if eq $authorName "Geetanjali Aich" }}<a href="https://scholar.google.com/citations?user=s9P-0QYAAAAJ&hl=en" target="_blank" rel="noreferrer">{{ $authorName }}</a>{{ else if $noScholar }}{{ $authorName }}{{ else }}<a href="https://scholar.google.com/citations?view_op=search_authors&mauthors={{ $authorName | urlquery }}&hl=en" target="_blank" rel="noreferrer">{{ $authorName }}</a>{{ end }}{{ if $equal }}<sup>*</sup>{{ end }}{{ end }}</p><p class="venue">{{ .venue }}{{ with .note }} · {{ . }}{{ end }}</p><details class="paper-details"><summary>About this work</summary><p class="paper-description">{{ .description }}</p></details></div></article>{{ end }}</div>
           {{ end }}
+        </div>
+        <div class="academic-services">
+          <p class="eyebrow">Academic Services</p>
+          <div class="service-list">{{ range $p.academic_services }}<article class="service-card"><p class="service-role">{{ .role }}</p><h3><a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .event }}</a></h3></article>{{ end }}</div>
         </div>
       </section>
 

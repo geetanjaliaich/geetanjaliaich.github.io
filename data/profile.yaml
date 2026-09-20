@@ -86,7 +86,7 @@ publications:
     url: https://openreview.net/forum?id=LEqZJUhHgg
   - year: 2026
     category: Responsible AI, Evaluation & Society
-    visual: arXiv · Under Review at TACL
+    visual: TACL
     title: "Queer NLP: A Critical Survey on Literature Gaps, Biases and Trends"
     description: >-
       This survey systematically reviews ACL Anthology research concerning LGBTQIA+ communities and NLP technologies. It maps recurring topics, methods, biases, and omissions across the literature. The study calls for more stakeholder involvement, intersectional and interdisciplinary work, broader language coverage, and proactive harm mitigation.
@@ -110,7 +110,7 @@ publications:
       - William Agnew
       - Wilson Y. Lee
       - Yanan Long
-    venue: arXiv preprint; under review at TACL
+    venue: TACL
     url: https://arxiv.org/abs/2602.16151
   - year: 2024
     category: AI for Health and Miscellaneous
@@ -183,6 +183,11 @@ publications:
       - Anindya Sen
     venue: International Conference on Smart Generation Computing, Communication and Networking (SMART GENCON)
     url: https://ieeexplore.ieee.org/document/9645808/
+
+academic_services:
+  - role: Invited Reviewer
+    event: "Queer in AI x {Dis}Ability in AI @ NeurIPS 2026"
+    url: https://www.queerinai.com/neurips-2026
 
 awards:
   - title: Jagadish Bose National Talent Search Junior Encouragement Award
