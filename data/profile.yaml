@@ -72,6 +72,27 @@ experience:
 publications:
   - year: 2026
     category: Responsible AI, Evaluation & Society
+    visual: NeurIPS 2026 Workshop
+    title: "Reading Between the Lines: How LGBTQ+ Users Turn to AI Chatbots for Mental Health, Gender, and Sexuality Advice"
+    authors:
+      - Jacob Hobbs
+      - Ashray Gupta
+      - Dennis Ulmer
+      - Geetanjali Aich
+      - Ian Rios-Sialer
+      - Jennifer Mickel
+      - Jordan Taylor
+      - Morgan Scheuerman
+      - Nolan Golden
+      - Rohit Mujumdar
+      - Yanan Long
+      - William Agnew
+    description: >-
+      This work explores how LGBTQ+ users turn to AI chatbots for advice on mental health, gender, and sexuality.
+    venue: "NeurIPS 2026 Workshop: Queer in AI x {Dis}Ability in AI"
+    note: Accepted as a poster
+  - year: 2026
+    category: Responsible AI, Evaluation & Society
     visual: COLM 2026 · MOSS Workshop
     title: "Understanding Small Scale Fine-tuning of LLM-as-a-Judge: A Case Study in Cybersecurity"
     description: >-
