@@ -70,6 +70,27 @@ experience:
     tags: [PyTorch, TensorFlow, OpenCV, GDAL, Scikit-learn]
 
 publications:
+  - year: 2027
+    category: Responsible AI, Evaluation & Society
+    visual: FAccT 2027
+    title: '"I had nobody to turn to": Why LGBTQ+ People Choose (Not) to Use AI Chatbots for Personal Health and Relationship Advice'
+    authors:
+      - Jacob Hobbs
+      - Ashray Gupta
+      - Dennis Ulmer
+      - Geetanjali Aich
+      - Nolan Golden
+      - Yanan Long
+      - Ian Rios-Sialer
+      - Jennifer Mickel
+      - Morgan Klaus Scheuerman
+      - Rohit Avinash Mujumdar
+      - Virginia K. Felkner
+      - Jordan Taylor
+      - William Agnew
+    description: >-
+      This work examines why LGBTQ+ people choose or choose not to use AI chatbots for personal health and relationship advice.
+    venue: Submitted to FAccT 2027
   - year: 2026
     category: Responsible AI, Evaluation & Society
     visual: NeurIPS 2026 Workshop
