@@ -91,6 +91,7 @@ publications:
     description: >-
       This work examines why LGBTQ+ people choose or choose not to use AI chatbots for personal health and relationship advice.
     venue: Submitted to FAccT 2027
+    url: https://arxiv.org/abs/2611.08854
   - year: 2026
     category: Responsible AI, Evaluation & Society
     visual: NeurIPS 2026 Workshop
